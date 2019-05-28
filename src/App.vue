@@ -9,10 +9,12 @@
                 <transition name="fade">
                   <div class="alert alert-info" v-show="show">this is info</div>
                 </transition>
-                <transition name="slide" type="animation">
+                <transition name="slide" type="animation" appear="">
                   <div class="alert alert-info" v-if="show">this is info</div>
                 </transition>
-                <transition name="fade" appear="">
+                <transition 
+                enter-active-class="animated bounce"
+                leave-active-class="animated shake">
                   <div class="alert alert-info" v-if="show">this is info</div>
                 </transition>
             </div>
